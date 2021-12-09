@@ -1,0 +1,19 @@
+<br />
+<h2 class="page-header">서비스 사용자 리스트</h2>
+<div class="alert" role="alert"></div>
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.name }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+    </tr>
+  </tbody>
+</table>

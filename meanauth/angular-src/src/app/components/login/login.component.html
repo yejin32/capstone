@@ -1,0 +1,51 @@
+<br />
+<h2 class="page-header">로그인 | Login</h2>
+<br />
+<div class="row">
+  <div class="col-md-7" id="form">
+    <form (ngSubmit)="onLoginSubmit()">
+      <div class="mb-3">
+        <label for="exampleInputEmail3" class="form-label">
+          아이디 | Username
+        </label>
+        <input
+          type="text"
+          [(ngModel)]="username"
+          [ngModelOptions]="{ standalone: true }"
+          class="form-control"
+          id="exampleInputEmail3"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail4" class="form-label">
+          패스워드 | Password</label
+        >
+        <input
+          type="password"
+          [(ngModel)]="password"
+          [ngModelOptions]="{ standalone: true }"
+          class="form-control"
+          id="exampleInputEmail4"
+        />
+      </div>
+      <div class="button">
+        <input type="submit" class="btn btn-dark" value="로그인" />&nbsp;&nbsp;
+        <form (ngSubmit)="onLoginSigSubmit()">
+          <input
+            type="submit"
+            class="btn btn-secondary"
+            value="원클릭 전자서명 로그인"
+          />
+        </form>
+        &nbsp;&nbsp;
+        <form (ngSubmit)="onQRSigLoginSubmit()">
+          <input
+            type="submit"
+            class="btn btn-secondary"
+            value="QR 전자서명 로그인"
+          />
+        </form>
+      </div>
+    </form>
+  </div>
+</div>

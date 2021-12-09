@@ -1,0 +1,19 @@
+h2 {
+  font-weight: 800;
+  text-align: center;
+}
+#mainTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#qrText {
+  font-size: 23px;
+}
+#qrValue {
+  width: 60%;
+}
+#qrCode {
+  margin-left: 30%;
+}

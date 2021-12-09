@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">
+      YeJin <i class="bi bi-emoji-smile"></i
+    ></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navR">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">
+            <i class="bi bi-house-fill"></i> Home</a
+          >
+        </li>
+        <li *ngIf="checkLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink="/profile">
+            <i class="bi bi-person-circle"></i> profile</a
+          >
+        </li>
+        <li *ngIf="checkLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink="/dashboard">
+            <i class="bi bi-speedometer"></i> dashboard</a
+          >
+        </li>
+        <li *ngIf="checkLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink="/list">
+            <i class="bi bi-card-text"></i> userlist</a
+          >
+        </li>
+        <li *ngIf="checkLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink="/cert">
+            <i class="bi bi-bank"></i> cert</a
+          >
+        </li>
+        <li *ngIf="checkLoggedIn()" class="nav-item">
+          <a class="nav-link" routerLink="/qrgen">
+            <i class="bi bi-qr-code"></i> Qrlogin</a
+          >
+        </li>
+      </ul>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbarR">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li *ngIf="!checkLoggedIn()" class="nav-item">
+            <a class="nav-link" routerLink="/login">
+              <i class="bi bi-box-arrow-in-left"></i> login</a
+            >
+          </li>
+          <li *ngIf="!checkLoggedIn()" class="nav-item">
+            <a class="nav-link" routerLink="/register">
+              <i class="bi bi-card-image"></i> register</a
+            >
+          </li>
+        </ul>
+        <li *ngIf="checkLoggedIn()" class="nav-item">
+          <a class="nav-link" (click)="onLogoutClick()" href="#">
+            <i class="bi bi-box-arrow-in-right"></i> logout</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
